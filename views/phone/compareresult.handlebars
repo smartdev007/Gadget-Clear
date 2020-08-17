@@ -1,0 +1,66 @@
+{{#if checkerror}}
+    <div class="compare-error center">No devices found. Please select different device.</div>
+    <div class="compare-error-back"><a href="/compare" class="button small">Back</a></div>
+{{else}}
+    {{#each devicelist}}
+        <div class="card">
+            <div class="table-title">
+                <h1>{{this.device}}</h1>
+                <span class="back-span"><a href="/search" class="button small">Back</a></span>
+            </div>
+                
+            <table>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <td><img src="{{this.image}}" alt="{{this.device}}"></td>
+                    </tr>
+                    <tr>
+                        <th>Device</th>
+                        <td>{{this.device}}</td>
+                    </tr>
+                    <tr>
+                        <th class="info">Technology</th>
+                        <td>{{this.Technology}}</td>
+                    </tr>
+                    <tr>
+                        <th class="info">Speed</th>
+                        <td>{{this.Speed}}</td>
+                    </tr>
+                    <tr>
+                        <th class="info">Announced</th>
+                        <td>{{this.Announced}}</td>
+                    </tr>
+                    <tr>
+                        <th class="info">Weight:</th>
+                        <td>{{this.Weight}}</td>
+                    </tr>
+                    <tr>
+                        <th class="info">OS</th>
+                        <td>{{this.OS}}</td>
+                    </tr>
+                    <tr>
+                        <th class="info">Processor</th>
+                        <td>{{this.Chipset}}</td>
+                    </tr>
+                    <tr>
+                        <th class="info" >Memory</th>
+                        <td>{{this.Internal}}</td>
+                    </tr>
+                    <tr>
+                        <th class="info">Display Size</th>
+                        <td>{{this.Size}}</td>
+                    </tr>
+                    <tr>
+                        <th class="info">Display Type</th>
+                        <td>{{this.Type}}</td>
+                    </tr>
+                   
+                   
+                    
+                </thead>
+            </table>
+            <br>
+        </div>
+    {{/each}}
+{{/if}}

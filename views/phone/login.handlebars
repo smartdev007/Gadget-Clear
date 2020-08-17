@@ -1,0 +1,27 @@
+<form action="/login" method="post">
+    <div class="login-container">
+        <div class="login-item">
+            <h2>Login</h2>
+        </div>
+        <div class="login-item">
+            <label for="username">Enter username or email:</label>
+            <input type="text" id="username" name="username" value="{{username}}" required />
+            <br />
+        </div>
+        <div class="login-item">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+        </div>
+        <div class="login-item">
+            <input class="button primary" type="submit" value="Submit" />
+        </div>
+        <label id="error-message"></label>
+
+        <p>{{error}}</p>
+        
+        <div class="login-item">
+        <a href="/creatUser">Create a new User</a>
+    </div>
+    </div>
+</form>
+  
